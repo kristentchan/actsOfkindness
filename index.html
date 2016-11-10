@@ -166,36 +166,46 @@ function myFunction() {
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     
-                    <li>
+                    <!--li>
                     <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
                     <div id="id01" class="modal">
-                    <form class="modal-content animate" action="index2.html">
-                    <div class="imgcontainer">
-                    <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-                    <!--img src="img_avatar2.png" alt="Avatar" class="avatar"-->
-                    </div>
-                    <div class="container" id="login">
-                    <label><b>Username</b></label>
-                    <input type="text" placeholder="Enter Username" name="uname" required>
-                    <label><b>Password</b></label>
-                    <input type="password" placeholder="Enter Password" name="psw" required>
-                    <button type="submit">Login</button>
-                    <input type="checkbox" checked="checked"> Remember me
-                    </div>
-                    </form>
+                        <form class="modal-content animate" action="index2.html">
+                            <div class="imgcontainer">
+                                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                            </div>
+                            <div class="container" id="login">
+                                <label><b>Username</b></label>
+                                <input type="text" placeholder="Enter Username" name="uname">
+                                <label><b>Password</b></label>
+                                <input type="password" placeholder="Enter Password" name="psw">
+                                <button type="submit">Login</button>
+                                <input type="checkbox" checked="checked"> Remember me
+                            </div>
+                        </form>
+                            <script language="javascript">
+                                function check(form) { /*function to check userid & password*/
+                                    /*the following code checkes whether the entered userid and password are matching*/
+                                    if(form.userid.value == "user1" && form.pswrd.value == "qwerty") {
+                                        window.open('index2.html')/*opens the target page while Id & password matches*/
+                                    }
+                                    else {
+                                        alert("Error")/*displays error message*/
+                                    }
+                                }
+                            </script>
                     </div>
                     <script>
-// Get the modal
-var modal = document.getElementById('id01');
+                        // Get the modal
+                        var modal = document.getElementById('id01');
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
-</script>
-                    </li>
+                        // When the user clicks anywhere outside of the modal, close it
+                        window.onclick = function(event) {
+                            if (event.target == modal) {
+                                modal.style.display = "none";
+                            }
+                        }
+                    </script>
+                    </li-->
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -209,10 +219,27 @@ window.onclick = function(event) {
         <div class="row">
             <div class="col-lg-12 text-center">
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-            <p id = "top_page"><b>Please login!</b></p>
+            <p id = "top_page"><b>Login to see your acts of kindness</b></p>
+            <form name="login">
+            <b>Username</b><input type="text" name="userid"/>
+            <b>Password</b><input type="password" name="pswrd"/>
+            <input type="button" onclick="check(this.form)" value="Login"/>
+            <input type="reset" value="Cancel"/>
+        </form>
+        <script language="javascript">
+            function check(form) { /*function to check userid & password*/
+                /*the following code checkes whether the entered userid and password are matching*/
+                if(form.userid.value == "user" && form.pswrd.value == "qwerty") {
+                    window.open('index2.html','_self',false)
+                }
+                else {
+                    alert("Error: Wrong Username or Password")/*displays error message*/
+                }
+            }
+        </script>
       <div id = "stage">
       </div>
-                <img src="img/100p.png" alt="heart" style="width:480px;height:420px;">
+                <!--img src="img/100p.png" alt="heart" style="width:480px;height:420px;"-->
                 
             </div>
         </div>
@@ -226,6 +253,7 @@ window.onclick = function(event) {
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+    
 
 </body>
 
