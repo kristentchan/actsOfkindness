@@ -1,0 +1,26 @@
+{
+   "current": "5",
+   "goal": "10",
+   "articles": [
+       {
+           "id": "Helped old man cross the street",
+           "rating": "4"
+       },
+       {
+           "id": "Helped mom buy groceries",
+           "rating": "2"
+       },
+       {
+          "id": "Gave homeless man food money",
+          "rating": "3"
+       },
+     {
+      "id": "Adopted a puppy on death row from shelter",
+      "rating": "5"
+     },
+     {
+      "id": "Took niece to Disneyland for birthday",
+      "rating": "1"
+     }
+   ]
+}
